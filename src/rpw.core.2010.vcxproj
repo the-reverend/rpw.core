@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release0|Win32">
+      <Configuration>Release0</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>rpw.core</ProjectName>
+    <ProjectGuid>{5080B3C9-BF1E-4191-8777-942C3267F78D}</ProjectGuid>
+    <RootNamespace>RPW</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release0|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>false</CLRSupport>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release0|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release0|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release0|Win32'">$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release0|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>WIN32;NDEBUG;FIRST_BUILD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <ProgramDataBaseFileName>$(IntDir)$(ProjectName).pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CriticalSection.cpp" />
+    <ClCompile Include="ErrnoException.cpp" />
+    <ClCompile Include="ErrorCodeException.cpp" />
+    <ClCompile Include="EventHandle.cpp" />
+    <ClCompile Include="FileSystem.cpp" />
+    <ClCompile Include="ForwardTable.cpp" />
+    <ClCompile Include="IniReader.cpp" />
+    <ClCompile Include="IpEndpoint.cpp" />
+    <ClCompile Include="LastErrorException.cpp" />
+    <ClCompile Include="LhsSocket.cpp" />
+    <ClCompile Include="Library.cpp" />
+    <ClCompile Include="MD5.cpp" />
+    <ClCompile Include="MD5Base.cpp" />
+    <ClCompile Include="ModuleVersion.cpp" />
+    <ClCompile Include="NotImplementedException.cpp" />
+    <ClCompile Include="NullArgumentException.cpp" />
+    <ClCompile Include="RhsSocket.cpp" />
+    <ClCompile Include="SelectSocket.cpp" />
+    <ClCompile Include="SmtpPlainTextMailSender.cpp" />
+    <ClCompile Include="Socket.cpp" />
+    <ClCompile Include="SocketException.cpp" />
+    <ClCompile Include="SocketProxy.cpp" />
+    <ClCompile Include="Stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release0|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="StringEx.cpp" />
+    <ClCompile Include="Utilities.cpp" />
+    <ClCompile Include="WsaData.cpp" />
+    <ClCompile Include="WsaEventHandle.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CommandLineProcessor.h" />
+    <ClInclude Include="CriticalSection.h" />
+    <ClInclude Include="deelx.h" />
+    <ClInclude Include="DisposableObjectFactory.h" />
+    <ClInclude Include="ErrnoException.h" />
+    <ClInclude Include="ErrorCodeException.h" />
+    <ClInclude Include="EventHandle.h" />
+    <ClInclude Include="FileSystem.h" />
+    <ClInclude Include="ForwardTable.h" />
+    <ClInclude Include="IDisposable.h" />
+    <ClInclude Include="IniReader.h" />
+    <ClInclude Include="IpEndpoint.h" />
+    <ClInclude Include="IReferenceCounter.h" />
+    <ClInclude Include="LastErrorException.h" />
+    <ClInclude Include="Library.h" />
+    <ClInclude Include="MD5.h" />
+    <ClInclude Include="MD5Base.h" />
+    <ClInclude Include="ModuleVersion.h" />
+    <ClInclude Include="NotImplementedException.h" />
+    <ClInclude Include="NullArgumentException.h" />
+    <ClInclude Include="RefCountSingleton.h" />
+    <ClInclude Include="rpw.core_manifest.h" />
+    <ClInclude Include="rpw.core_manifest.uuid.h" />
+    <ClInclude Include="SelectSocket.h" />
+    <ClInclude Include="SimpleThread.h" />
+    <ClInclude Include="SmtpPlainTextMailSender.h" />
+    <ClInclude Include="Socket.h" />
+    <ClInclude Include="SocketException.h" />
+    <ClInclude Include="SocketProxy.h" />
+    <ClInclude Include="Stdafx.h" />
+    <ClInclude Include="StringEx.h" />
+    <ClInclude Include="TargetVersion.h" />
+    <ClInclude Include="Utilities.h" />
+    <ClInclude Include="WsaData.h" />
+    <ClInclude Include="WsaEventHandle.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\manifest">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Writing $(ProjectName)_%(Filename)%(Extension).h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">fmh -infile %(FullPath) -prefix "RPW_CORE_" &gt; $(ProjectName)_%(Filename)%(Extension).h
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName)_%(Filename)%(Extension).h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Writing $(ProjectName)_%(Filename)%(Extension).h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">fmh -infile %(FullPath) -prefix "RPW_CORE_" &gt; $(ProjectName)_%(Filename)%(Extension).h
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectName)_%(Filename)%(Extension).h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\manifest.uuid">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Writing $(ProjectName)_%(Filename)%(Extension).h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">fmh -infile %(FullPath) -prefix "RPW_CORE_" &gt; $(ProjectName)_%(Filename)%(Extension).h
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName)_%(Filename)%(Extension).h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Writing $(ProjectName)_%(Filename)%(Extension).h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">fmh -infile %(FullPath) -prefix "RPW_CORE_" &gt; $(ProjectName)_%(Filename)%(Extension).h
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectName)_%(Filename)%(Extension).h;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
